@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>LOGIN</h2>
+<input type="password" id="p">
+<button onclick="l()">LOGIN</button>
+<script>
+const ok=["VIP*123","ABC*123","SACHIN*123","PROFIT*123"];
+function l(){
+ if(ok.includes(p.value)) location.href="game.html";
+ else alert("Wrong password");
+}
+</script>
+</body>
+</html>

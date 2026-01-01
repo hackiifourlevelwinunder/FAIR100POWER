@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>3 LEVEL FIX NUMBER</h1>
+<div id="r">Loading...</div>
+<ul id="h"></ul>
+<script>
+async function load(){
+ const d = await fetch("/data").then(r=>r.json());
+ r.innerText="RESULT: "+d.result;
+ h.innerHTML="";
+ d.history.forEach(x=>{
+  let li=document.createElement("li");
+  li.innerText=x.period+" = "+x.result;
+  h.appendChild(li);
+ });
+}
+setInterval(load,1000);
+</script>
+</body>
+</html>
